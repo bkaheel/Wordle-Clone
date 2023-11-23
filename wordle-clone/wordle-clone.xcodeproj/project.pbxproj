@@ -18,6 +18,7 @@
 		94FC05A52B0F7F5C003EEB74 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC05A42B0F7F5C003EEB74 /* Global.swift */; };
 		94FC05A72B0F8869003EEB74 /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC05A62B0F8869003EEB74 /* LetterButtonView.swift */; };
 		94FC05A92B0F89B7003EEB74 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC05A82B0F89B7003EEB74 /* Keyboard.swift */; };
+		94FC05AC2B0FEA43003EEB74 /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC05AB2B0FEA43003EEB74 /* Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		94FC05A42B0F7F5C003EEB74 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		94FC05A62B0F8869003EEB74 /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		94FC05A82B0F89B7003EEB74 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		94FC05AB2B0FEA43003EEB74 /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		94FC05842B0F7534003EEB74 /* wordle-clone */ = {
 			isa = PBXGroup;
 			children = (
+				94FC05AA2B0FEA29003EEB74 /* Animations */,
 				94FC05852B0F7534003EEB74 /* wordle_cloneApp.swift */,
 				94FC05A12B0F7E34003EEB74 /* ViewModels */,
 				94FC059A2B0F7AA7003EEB74 /* Models */,
@@ -120,6 +123,14 @@
 				94FC05A22B0F7E59003EEB74 /* WordleDataModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		94FC05AA2B0FEA29003EEB74 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				94FC05AB2B0FEA43003EEB74 /* Shake.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 				94FC059C2B0F7AE8003EEB74 /* Guess.swift in Sources */,
 				94FC05A92B0F89B7003EEB74 /* Keyboard.swift in Sources */,
 				94FC05992B0F7948003EEB74 /* Color+Extension.swift in Sources */,
+				94FC05AC2B0FEA43003EEB74 /* Shake.swift in Sources */,
 				94FC05A32B0F7E59003EEB74 /* WordleDataModel.swift in Sources */,
 				94FC05862B0F7534003EEB74 /* wordle_cloneApp.swift in Sources */,
 				94FC05A52B0F7F5C003EEB74 /* Global.swift in Sources */,
