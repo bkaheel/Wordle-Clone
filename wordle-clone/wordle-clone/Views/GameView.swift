@@ -10,56 +10,91 @@ import SwiftUI
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-                VStack(spacing: 3) {
-                    ForEach(0...5, id: \.self) { index in
-                        GuessView(guess: $dm.guesses[index])
-                            .modifier(Shake(animatableData: CGFloat(dm.incorrectAttempts[index])))
+        ZStack {
+            NavigationView {
+                VStack {
+                    Spacer()
+                    VStack(spacing: 3) {
+                        ForEach(0...5, id: \.self) { index in
+                            GuessView(guess: $dm.guesses[index])
+                                .modifier(Shake(animatableData: CGFloat(dm.incorrectAttempts[index])))
+                        }
+                    }
+                    .frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
+                    Spacer()
+                    Keyboard()
+                        .scaleEffect(Global.keyboardScale)
+                        .padding(.top)
+                    Spacer()
+                }
+                .padding()
+                .overlay(alignment: .top) {
+                    if let toastText = dm.toastText {
+                        ToastView(toastText: toastText)
+                            .frame(width: 175, height: 15)
+                            .fontWeight(.heavy)
                     }
                 }
-                .frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
-                Spacer()
-                Keyboard()
-                    .scaleEffect(Global.keyboardScale)
-                    .padding(.top)
-                Spacer()
-            }
-                .padding()
                 .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        HStack {
+                            if !dm.inPlay {
+                                Button {
+                                    dm.newGame()
+                                } label: {
+                                    Text("New")
+                                        .foregroundColor(.primary)
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+
+                                }
+                            }
+                            
+                            
+                        }
+                    }
                     ToolbarItem(placement: .topBarLeading) {
                         Button {
                             
                         } label: {
-                            Image(systemName: "questionmark.circle")
-                        }
-                    }
-                    ToolbarItem(placement: .principal) {
-                        Button {
-                            
-                        } label: {
                             Text("Wordle")
-                                .font(.largeTitle)
+                                .font(.title)
                                 .fontWeight(.heavy)
                                 .foregroundColor(.primary)
                         }
                     }
                     ToolbarItem(placement: .topBarTrailing) {
-                        HStack {
+                        HStack(spacing: -0.5) {
                             Button {
                                 
                             } label: {
+                                Image(systemName: "questionmark.circle")
+                                    .foregroundColor(.primary)
+                                    .fontWeight(.bold)
+                            }
+                            Button {
+                                withAnimation {
+                                    dm.showStats.toggle()
+                                }
+                            } label: {
                                 Image(systemName: "chart.bar")
+                                    .foregroundColor(.primary)
+                                    .fontWeight(.bold)
                             }
                             Button {
                                 
                             } label: {
                                 Image(systemName: "gearshape.fill")
+                                    .foregroundColor(.primary)
+                                    .fontWeight(.bold)
                             }
                         }
                     }
                 }
+            }
+            if dm.showStats {
+                StatsView()
+            }
         }
         .navigationViewStyle(.stack)
     }
