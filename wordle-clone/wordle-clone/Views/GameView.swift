@@ -11,6 +11,8 @@ struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
     @State private var showStats = false
     @State private var showHelp = false
+    @State private var isPresentingStats = false
+    
     var body: some View {
         ZStack {
             NavigationView {
@@ -44,7 +46,8 @@ struct GameView: View {
                                 Button {
                                     dm.newGame()
                                 } label: {
-                                    Text("New")
+                                    Image(systemName: "play")
+//                                    Text("New")
                                         .foregroundColor(.primary)
                                         .font(.title3)
                                         .fontWeight(.bold)

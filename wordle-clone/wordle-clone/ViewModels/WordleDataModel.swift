@@ -173,11 +173,11 @@ class WordleDataModel: ObservableObject {
         }
         withAnimation(Animation.linear(duration: 0.2).delay(1)) {
             toastText = nil
-            if gameOver {
-                withAnimation(Animation.linear(duration: 0.2).delay(1)) {
-                    showStats.toggle()
-                }
-            }
+//            if gameOver {
+//                withAnimation(Animation.linear(duration: 0.2).delay(1)) {
+//                    showStats.toggle()
+//                }
+//            }
         }
     }
     

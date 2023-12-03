@@ -12,7 +12,6 @@ struct StatsView: View {
     @EnvironmentObject var dm: WordleDataModel
     
     var body: some View {
-        
         NavigationView {
             VStack(spacing: 20){
                     Text("STATISTICS")
