@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
+    @State private var showStats = false
+    @State private var showHelp = false
     var body: some View {
         ZStack {
             NavigationView {
@@ -66,7 +68,7 @@ struct GameView: View {
                     ToolbarItem(placement: .topBarTrailing) {
                         HStack(spacing: -0.5) {
                             Button {
-                                
+                                showHelp.toggle()
                             } label: {
                                 Image(systemName: "questionmark.circle")
                                     .foregroundColor(.primary)
@@ -74,7 +76,7 @@ struct GameView: View {
                             }
                             Button {
                                 withAnimation {
-                                    dm.showStats.toggle()
+                                    showStats.toggle()
                                 }
                             } label: {
                                 Image(systemName: "chart.bar")
@@ -97,6 +99,13 @@ struct GameView: View {
             }
         }
         .navigationViewStyle(.stack)
+        .sheet(isPresented: $showHelp) {
+            HelpView()
+        }
+        .sheet(isPresented: $showStats) {
+            StatsView()
+        }
+        
     }
 }
 

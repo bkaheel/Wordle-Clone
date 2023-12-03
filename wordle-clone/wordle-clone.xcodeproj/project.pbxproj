@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		949AE3D72B1D162100634988 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949AE3D62B1D162100634988 /* HelpView.swift */; };
 		94FC05862B0F7534003EEB74 /* wordle_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC05852B0F7534003EEB74 /* wordle_cloneApp.swift */; };
 		94FC05882B0F7534003EEB74 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FC05872B0F7534003EEB74 /* GameView.swift */; };
 		94FC058D2B0F7535003EEB74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FC058C2B0F7535003EEB74 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		949AE3D62B1D162100634988 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		94FC05822B0F7534003EEB74 /* wordle-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wordle-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FC05852B0F7534003EEB74 /* wordle_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordle_cloneApp.swift; sourceTree = "<group>"; };
 		94FC05872B0F7534003EEB74 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				94FC05A82B0F89B7003EEB74 /* Keyboard.swift */,
 				94FC05AF2B10154E003EEB74 /* ToastView.swift */,
 				94FC05B32B10292E003EEB74 /* StatsView.swift */,
+				949AE3D62B1D162100634988 /* HelpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				94FC05862B0F7534003EEB74 /* wordle_cloneApp.swift in Sources */,
 				94FC05A52B0F7F5C003EEB74 /* Global.swift in Sources */,
 				94FC05B42B10292E003EEB74 /* StatsView.swift in Sources */,
+				949AE3D72B1D162100634988 /* HelpView.swift in Sources */,
 				94FC05B22B10257B003EEB74 /* Statistic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
