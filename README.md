@@ -1,2 +1,4 @@
-# wordle-clone
-This hopefully works
+# Wordle SwiftUI Clone
+
+### App Team Carolina Final Project
+
